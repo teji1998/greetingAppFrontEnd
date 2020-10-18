@@ -101,6 +101,12 @@ h3{
     border-radius: 5px;
 }
 
+.user-greetings .user-info {
+    float: left;
+    max-width: 67%;
+    color: black;
+  }
+
 
 
 
