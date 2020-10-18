@@ -107,8 +107,10 @@ h3{
     color: black;
 }
 
+
 .add-user-modal,
-.edit-user-modal {
+.edit-user-modal,
+.delete-user-modal {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
@@ -120,7 +122,8 @@ h3{
 }
 
 .add-user-modal-contents,
-.edit-user-modal-contents {
+.edit-user-modal-contents,
+.delete-user-modal-contents {
   height: 320px;
   width: 500px;
   background-color: white;
@@ -130,9 +133,14 @@ h3{
   border-radius: 4px;
 }
 
+.delete-user-modal-contents{
+  height: 200px;
+  width: 400px;
+}
 .override #first-name,
 #last-name,
-#enter-greeting {
+#enter-greeting,
+#object-id {
   margin: 15px auto;
   display: block;
   width: 50%;
@@ -143,7 +151,8 @@ h3{
 
 
 .override #add-new-greeting-header,
-#edit-greeting-header {
+#edit-greeting-header,
+#delete-greeting-header {
   padding: 10px;
 }
 
@@ -155,13 +164,14 @@ h3{
 }
 
 
-.override .submit-button:hover {
+.override.submit-button:hover {
   background: green;
   color: black;
 }
 
 .override .close-button-for-add-user,
-.override .close-button-for-edit-user {
+.override .close-button-for-edit-user,
+.close-button-for-delete-user {
   padding: 5px;
   position: absolute;
   top: 0;
@@ -172,7 +182,8 @@ h3{
 }
 
 .override .close-button-for-add-user,
-.override .close-button-for-edit-user {
+.override .close-button-for-edit-user,
+.close-button-for-delete-user {
   color:red;
   border-radius: 2px;
 }
