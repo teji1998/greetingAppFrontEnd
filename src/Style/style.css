@@ -4,9 +4,19 @@
     box-sizing: border-box;
 }
 
-html{
+html,body{
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6em;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    padding-bottom: 20px;
+    text-align: center;
 }
 
 .container {
@@ -15,5 +25,53 @@ html{
     overflow: auto;
     padding: 0 20px;
   }
+#navbar {
+    background-color: beige;
+    color: black;
+    overflow: auto;
+}
+#navbar a {
+    color: black;
+}
+#navbar h1 {
+    float: left;
+    padding-top: 20px;
+
+}
+#navbar ul {
+    list-style: none;
+    float: right;
+
+}
+#navbar ul li {
+    float: left;
+}
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+#navbar #sign-up a {
+    background: beige;
+    color: black;
+    border-radius: 0%;
+}
+#navbar #sign-in a {
+    background: beige;
+    color: black;
+    border-radius: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
