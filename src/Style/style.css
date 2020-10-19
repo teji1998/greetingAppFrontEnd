@@ -107,7 +107,6 @@ h3{
     color: black;
 }
 
-
 .add-user-modal,
 .edit-user-modal,
 .delete-user-modal {
@@ -137,6 +136,7 @@ h3{
   height: 200px;
   width: 400px;
 }
+
 .override #first-name,
 #last-name,
 #enter-greeting,
@@ -148,7 +148,6 @@ h3{
   border: 1px solid brown;
   color:paleturquoise
 }
-
 
 .override #add-new-greeting-header,
 #edit-greeting-header,
@@ -162,7 +161,6 @@ h3{
   border-radius: 4px;
   background: rgb(236, 236, 236)
 }
-
 
 .override.submit-button:hover {
   background: green;
