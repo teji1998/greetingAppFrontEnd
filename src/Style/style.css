@@ -35,7 +35,7 @@ h3{
     overflow: auto;
 }
 
-#navbar a {
+#navbar div {
     color: black;
 }
 
@@ -54,19 +54,19 @@ h3{
     float: left;
 }
 
-#navbar ul li a {
+#navbar ul li div {
     display: block;
     padding: 20px;
     text-align: center;
 }
 
-#navbar #sign-up a {
+#navbar #sign-up div {
     background: peachpuff;
     color: black;
     border-radius: 0%;
 }
 
-#navbar #sign-in a {
+#navbar #sign-in div {
     background: peachpuff;
     color: black;
     border-radius: 0%;
@@ -88,14 +88,14 @@ h3{
     list-style: none;
 }
 
-.user-greetings .sidebar-menu ul li a {
+.user-greetings .sidebar-menu ul li div {
     display: block;
     text-align: center;
     padding: 50px;
     font-size: 30px;
 }
 
-.user-greetings .sidebar-menu ul li a:hover {
+.user-greetings .sidebar-menu ul li div:hover {
     background-color: lime;
     color: black;
     border-radius: 5px;
