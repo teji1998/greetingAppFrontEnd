@@ -89,12 +89,10 @@ async function addToDataBase(event) {
   event.preventDefault();
   try {
     const detail = [firstName, lastName, greetingMessage];
-     // console.log(detail);
     const greeting = createGreetingObject(detail);
     console.log(greeting);
     const response =  await fetch('http://localhost:8080/greeting/add', {
       method: 'POST',
-      // Accept: 'application/json, */*',
       headers: {
         'Content-Type': 'application/json',
       },
