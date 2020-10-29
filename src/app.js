@@ -120,3 +120,51 @@ function createGreetingObject(inputArr) {
 function clearFields() {
   (firstName.value = ''), (lastName.value = ''), (greetingMessage.value = '');
 }
+
+const editFirstName = document.getElementById('edit-first-name'),
+  editLastName = document.getElementById('edit-last-name'),
+editUserObjectId = document.getElementById('edit-id'),
+editMessage = document.getElementById('edit-message'),
+  editUserForm = document.querySelector('.edit-user');
+
+editUserForm.addEventListener('submit', editInDataBase);
+
+function editInDataBase() {
+  try {
+    console.log(editUserObjectId.value);
+    const detail = [
+      editUserObjectId,
+      editFirstName,
+      editLastName,
+      editMessage
+    ];
+
+    const response = fetch("http://localhost:8080/greeting/edit?id="+editUserObjectId.value, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        greetingId:editUserObjectId.value,
+        firstName: editFirstName.value,
+        lastName: editLastName.value,
+        message: editMessage.value
+      }),
+    });
+    alert(
+      `Successfully edited user!`
+    );
+      closeEditFormButton.click();
+    listAllUsersButton.click();
+  } catch (error) {
+    clearEditFormFields();
+    alert(error.message);
+  }
+}
+
+function clearEditFormFields() {
+  (editUserObjectId.value = ''),
+    (editFirstName.value = ''),
+    (editLastName.value = ''),
+    (editMessage.value = '')
+}
