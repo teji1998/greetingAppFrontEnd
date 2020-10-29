@@ -48,7 +48,6 @@ listAllUsersButton.addEventListener("click", getAllUsersFromDataBase);
 async function getAllUsersFromDataBase(e) {
   try {
     e.preventDefault();
-    console.log("bonjour")
      const URL = "http://localhost:8080/greeting/all";
 
     const response = await fetch(URL, {
@@ -129,7 +128,8 @@ editMessage = document.getElementById('edit-message'),
 
 editUserForm.addEventListener('submit', editInDataBase);
 
-function editInDataBase() {
+async function editInDataBase(event) {
+    event.preventDefault();
   try {
     console.log(editUserObjectId.value);
     const detail = [
@@ -139,8 +139,8 @@ function editInDataBase() {
       editMessage
     ];
 
-    const response = fetch("http://localhost:8080/greeting/edit?id="+editUserObjectId.value, {
-      method: 'PUT',
+ const response = await fetch("http://localhost:8080/greeting/edit?id="+editUserObjectId.value, {
+           method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -154,7 +154,7 @@ function editInDataBase() {
     alert(
       `Successfully edited user!`
     );
-      closeEditFormButton.click();
+    closeEditFormButton.click();
     listAllUsersButton.click();
   } catch (error) {
     clearEditFormFields();
@@ -174,10 +174,10 @@ const deleteUserForm = document.querySelector('.delete-user'),
 
 deleteUserForm.addEventListener('submit', deleteInDataBase);
 
-function deleteInDataBase () {
+function deleteInDataBase (event) {
 try {
-
-  console.log(deleteUserObjectId.value);
+    event.preventDefault();
+    console.log(deleteUserObjectId.value);
     const response = fetch("http://localhost:8080/greeting/delete?id="+deleteUserObjectId.value, {
       method: 'DELETE',
       headers: {
@@ -186,7 +186,7 @@ try {
     });
     alert(`User Deleted!`);
     deleteUserObjectId.value = '';
-     closeDeleteFormButton.click();
+    closeDeleteFormButton.click();
     listAllUsersButton.click();
   } catch (error) {
     deleteUserObjectId.value = '';

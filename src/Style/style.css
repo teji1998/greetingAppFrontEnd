@@ -133,17 +133,7 @@
   position: relative;
   border-radius: 4px;
   }
-  
-  /* .edit-user-modal-contents {
-    height: 800px;
-    width: 500px;
-  } 
-  
-   .delete-user-modal-contents{
-  height: 250px;
-  width: 500px;
-  } */
-  
+   
   .override #first-name,
   #last-name,
   #greeting,
