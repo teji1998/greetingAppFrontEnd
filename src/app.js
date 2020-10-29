@@ -168,3 +168,28 @@ function clearEditFormFields() {
     (editLastName.value = ''),
     (editMessage.value = '')
 }
+
+const deleteUserForm = document.querySelector('.delete-user'),
+  deleteUserObjectId = document.getElementById('object-id');
+
+deleteUserForm.addEventListener('submit', deleteInDataBase);
+
+function deleteInDataBase () {
+try {
+
+  console.log(deleteUserObjectId.value);
+    const response = fetch("http://localhost:8080/greeting/delete?id="+deleteUserObjectId.value, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    alert(`User Deleted!`);
+    deleteUserObjectId.value = '';
+     closeDeleteFormButton.click();
+    listAllUsersButton.click();
+  } catch (error) {
+    deleteUserObjectId.value = '';
+    alert(error.message);
+  }
+}
