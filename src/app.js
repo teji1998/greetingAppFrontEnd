@@ -61,7 +61,7 @@ async function getAllUsersFromDataBase(e) {
 
     let inputToHTML = ``;
 
-    await results.forEach((data) => {
+    await results.reverse().forEach((data) => {
       inputToHTML += input(data);
       document.getElementById("input-from-database").innerHTML = inputToHTML;
     });
