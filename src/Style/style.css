@@ -225,12 +225,15 @@
     border-width: 2px;
     margin: 10px;
   }
+
   .user-greetings #section-header {
     text-align: left;
   }
+  
   .user-greetings .user-details {
     font-weight: 400;
   }
+  
   .user-greetings .details-id {
     font-size: 10px;
     font-weight: 300;

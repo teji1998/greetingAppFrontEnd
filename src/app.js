@@ -9,12 +9,14 @@ addUserOverride = document.querySelector(".add-user-modal"),
 editUserOverride = document.querySelector(".edit-user-modal"),
 deleteUserOverride = document.querySelector(".delete-user-modal");
   
+
 addUserButton.addEventListener("click", displayAddUserForm);
 editUserButton.addEventListener("click", displayEditUserForm);
 deleteUserButton.addEventListener("click", displayDeleteUserForm);
 closeAddFormButton.addEventListener("click", closeAddUserForm);
 closeEditFormButton.addEventListener("click", closeEditUserForm);
 closeDeleteFormButton.addEventListener("click", closeDeleteUserForm);
+
 
 function displayAddUserForm() {
     addUserOverride.style.display = "flex";
@@ -39,7 +41,7 @@ function closeEditUserForm() {
 function closeDeleteUserForm() {
     deleteUserOverride.style.display = "none";
 }
-  
+
 
 listAllUsersButton.addEventListener("click", getAllUsersFromDataBase);
 
@@ -68,7 +70,6 @@ async function getAllUsersFromDataBase(e) {
     console.log(error.message);
   }
 }
-
 
 function input(data) {
   return `<div class="user-details-object">
@@ -116,7 +117,6 @@ function createGreetingObject(inputArr) {
     };
   }
   
-
 function clearFields() {
   (firstName.value = ''), (lastName.value = ''), (greetingMessage.value = '');
 }
