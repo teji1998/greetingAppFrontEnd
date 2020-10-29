@@ -18,7 +18,7 @@
 
         <header>         
             <nav id="navbar">
-                <h1 class="logo"><a href="index.html">Greetings Application</a></h1>
+                <h1 class="logo"><a href="../Components/index.html">Greetings Application</a></h1>
                 <ul>
                     <li>
                         <div ><i class="fas fa-bell fa-lx"></i></div>
@@ -47,16 +47,16 @@
             <div class="sidebar-menu">
                 <ul>
                     <li>
-                        <div  id="list-all-users-button">List</div>
+                        <div  id="list-all-users-button"><i class="fas fa-list fa-1x"></i>List</div>
                     </li>
                     <li>
-                        <div  id="add-user-button"> Add</div>
+                        <div  id="add-user-button"><i class="fas fa-user fa-1x"></i> Add</div>
                     </li>
                     <li>
-                        <div  id="edit-user-button" > Edit</div>
+                        <div id="edit-user-button" > <i class="fas fa-edit fa-1x"></i>Edit</div>
                     </li>
                     <li>
-                        <div  id="delete-user-button" > Delete</div>
+                        <div  id="delete-user-button" ><i class="fas fa-user fa-1x"></i> Delete</div>
                     </li>
                 </ul>
             </div>
@@ -64,9 +64,14 @@
             <div class="user-info">
                 <div class="box-users">
                     <h2 id="section-header">Greeting Messages</h2>
-                </div>
-            </div>
-        </section>
+                    <div class="user-details-object">
+                        <p class="paragraph-user-details"> 
+                        </p>
+                      </div>
+                      <div id="input-from-database"></div>
+                    </div>
+                  </div>
+                </section>
         
         <div class="override">
 
@@ -74,11 +79,13 @@
                 <div class="add-user-modal-contents">
                     <div class="close-button-for-add-user">X</div>
                     <h3 id="add-new-greeting-header" >Add New Greeting</h3>
-                    <form action="">
+                    <form class="add-user" action="">
                         <input type="text" id="first-name" name="first-name" placeholder="Enter First Name" />
+                        <small>Error message</small>
                         <input type="text" id="last-name" name="last-name" placeholder="Enter Last Name" />
-                        <input type="text" id="enter-greeting" name="enter-greeting" placeholder="Enter Greeting Message" />
-                        <button href="#" class="submit-button">Submit</button>
+                        <small>Error message</small>
+                        <input type="text" id="greeting" name="greeting" placeholder="Enter Greeting Message" />
+                        <button  class="add-submit-button">Submit</button>
                     </form>
                 </div>
             </div>
@@ -87,11 +94,12 @@
                 <div class="edit-user-modal-contents">
                     <div class="close-button-for-edit-user">X</div>
                     <h3 id="edit-greeting-header" >Edit Greeting</h3>
-                    <form action="">
-                        <input type="text" id="first-name" name="first-name" placeholder="Enter First Name" />
-                        <input type="text" id="last-name" name="last-name" placeholder="Enter Last Name" />
-                        <input type="text" id="enter-greeting" name="enter-greeting" placeholder="Enter Greeting Message" />
-                        <button class="submit-button">Submit</button>
+                    <form class="edit-user" action="">
+                        <input type="text" id="edit-id" name="object-id" placeholder="Enter object id" />
+                        <input type="text" id="edit-first-name" name="first-name" placeholder="Enter first Name" />
+                        <input type="text" id="edit-last-name" name="last-name" placeholder="Enter last Name" />
+                        <input type="text" id="edit-message" name="message" placeholder="Enter message " />
+                        <button  class="edit-submit-button">Submit</button>
                     </form>
                 </div>
             </div>
@@ -100,9 +108,9 @@
                 <div class="delete-user-modal-contents">
                     <div class="close-button-for-delete-user">X</div>
                     <h3 id="delete-greeting-header" >Delete Greeting</h3>
-                    <form action="">
+                    <form class ="delete-user" action="">
                         <input type="text" id="object-id" name="object-id" placeholder="Enter Id of the Greeting" />
-                        <button  class="submit-button">Submit</button>
+                        <button  class="delete-submit-button" >Submit</button>
                     </form>
                 </div>
             </div>

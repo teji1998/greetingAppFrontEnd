@@ -2,114 +2,116 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html,
-body {
+  }
+  
+  html,
+  body {
     font-family: 'Times New Roman', Times, serif;
-    line-height: 2.0em;
-}
-
-a {
+    line-height: 1.7em;
+  }
+  
+  a {
     color: blue;
     text-decoration: none;
-}
-
-h1,
-h2,
-h3{
+  }
+  
+  h1,
+  h2,
+  h3{
     padding-bottom: 20px;
     text-align: center;
-}
-
-.container {
+  }
+  
+  .container {
     margin: auto;
-    max-width: 1100px;
+    max-width: 1400px;
     overflow: auto;
     padding: 0 20px;
-}
-
-#navbar {
-    background-color: peachpuff;
+  }
+  
+  #navbar {
+    background: peachpuff;
     color: black;
     overflow: auto;
-}
-
-#navbar div {
+  }
+  
+  #navbar div {
     color: black;
-}
-
-#navbar h1 {
+  }
+  
+  #navbar h1 {
     float: left;
     padding-top: 20px;
-}
-
-#navbar ul {
+  }
+  
+  #navbar ul {
     list-style: none;
     float: right;
-
-}
-
-#navbar ul li {
+  
+  }
+  
+  #navbar ul li {
     float: left;
-}
-
-#navbar ul li div {
+  }
+  
+  #navbar ul li div {
     display: block;
     padding: 20px;
     text-align: center;
-}
-
-#navbar #sign-up div {
+  }
+  
+  #navbar #sign-up div {
     background: peachpuff;
     color: black;
-    border-radius: 0%;
-}
-
-#navbar #sign-in div {
+    border-radius: 50%;
+  }
+  
+  #navbar #sign-in div {
     background: peachpuff;
     color: black;
-    border-radius: 0%;
-}
-
-.user-greetings {
-    padding: 0px 20px 20px 0px;
-}
-
-.user-greetings .sidebar-menu {
+    border-radius: 50%;
+  }
+  
+  .user-greetings {
+    padding: 50px 20px 20px 20px;
+  }
+  
+  .user-greetings .sidebar-menu {
     float: left;
-    max-width: 33%;
+    max-width: 30%;
+    height:100%;
+    width: 300px;
+    border-radius: 5px;
     padding: 20px;
     text-align: center;
-    background-color: beige;
-}
-
-.user-greetings .sidebar-menu ul {
+  }
+  
+  .user-greetings .sidebar-menu ul {
     list-style: none;
-}
-
-.user-greetings .sidebar-menu ul li div {
+  }
+  
+  .user-greetings .sidebar-menu ul li div {
     display: block;
     text-align: center;
-    padding: 50px;
-    font-size: 30px;
-}
-
-.user-greetings .sidebar-menu ul li div:hover {
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+  .user-greetings .sidebar-menu ul li div:hover {
     background-color: lime;
     color: black;
-    border-radius: 5px;
-}
-
-.user-greetings .user-info {
+    border-radius: 10px;
+  }
+  
+  .user-greetings .user-info {
     float: left;
-    max-width: 67%;
+    max-width: 70%;
     color: black;
-}
-
-.add-user-modal,
-.edit-user-modal,
-.delete-user-modal {
+  }
+  
+  .add-user-modal,
+  .edit-user-modal,
+  .delete-user-modal {
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 100%;
@@ -118,70 +120,130 @@ h3{
   display: none;
   justify-content: center;
   align-items: center;
-}
-
-.add-user-modal-contents,
-.edit-user-modal-contents,
-.delete-user-modal-contents {
-  height: 320px;
+  }
+  
+  .add-user-modal-contents,
+  .edit-user-modal-contents,
+  .delete-user-modal-contents {
+  height: 624px;
   width: 500px;
   background-color: white;
   text-align: center;
   padding: 20px;
   position: relative;
   border-radius: 4px;
-}
-
-.delete-user-modal-contents{
-  height: 200px;
-  width: 400px;
-}
-
-.override #first-name,
-#last-name,
-#enter-greeting,
-#object-id {
+  }
+  
+  /* .edit-user-modal-contents {
+    height: 800px;
+    width: 500px;
+  } 
+  
+   .delete-user-modal-contents{
+  height: 250px;
+  width: 500px;
+  } */
+  
+  .override #first-name,
+  #last-name,
+  #greeting,
+  #object-id,
+  #greeting-message,
+  #edit-first-name,
+  #edit-message,
+  #edit-last-name,
+  #object-id-delete-user,
+  #object-id-edit-user  {
   margin: 15px auto;
   display: block;
   width: 50%;
   padding: 8px;
-  border: 1px solid brown;
-  color:paleturquoise
-}
-
-.override #add-new-greeting-header,
-#edit-greeting-header,
-#delete-greeting-header {
-  padding: 10px;
-}
-
-.override .submit-button {
+  color:black
+  }
+  
+  .override #add-new-greeting-header,
+  #edit-greeting-header,
+  #delete-greeting-header {
+  padding: 5px;
+  }
+  
+  .override .add-submit-button,
+  .override .edit-submit-button,
+  .override .delete-submit-button {
   margin-top: 10px;
   padding: 10px;
   border-radius: 4px;
   background: rgb(236, 236, 236)
-}
-
-.override.submit-button:hover {
+  }
+  
+  .override.submit-button:hover {
   background: green;
   color: black;
-}
-
-.override .close-button-for-add-user,
-.override .close-button-for-edit-user,
-.close-button-for-delete-user {
+  }
+  
+  .override .close-button-for-add-user,
+  .override .close-button-for-edit-user,
+  .close-button-for-delete-user {
   padding: 5px;
   position: absolute;
   top: 0;
   right: 10px;
-  font-size: 30px;
+  font-size: 42px;
   color:black;
   cursor: pointer;
-}
-
-.override .close-button-for-add-user,
-.override .close-button-for-edit-user,
-.close-button-for-delete-user {
+  }
+  
+  .override .close-button-for-add-user,
+  .override .close-button-for-edit-user,
+  .close-button-for-delete-user {
   color:red;
-  border-radius: 2px;
-}
+  border-radius: 4px;
+  }
+  
+  .override small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+  }
+  
+  .box-users {
+    float: left;
+    min-width: 100%;
+    margin-left: 150px;
+    margin: 0px 75px 0px 75px;
+    padding: 10px;
+    text-align: center;
+  }
+  .box-users .user-details-object {
+    float: left;
+    list-style: none;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+    margin: 10px;
+  }
+  .user-greetings #section-header {
+    text-align: left;
+  }
+  .user-greetings .user-details {
+    font-weight: 400;
+  }
+  .user-greetings .details-id {
+    font-size: 10px;
+    font-weight: 300;
+  }
+  
+  .user-info .input-from-data-base .user-details-object {
+    min-width: 300px;
+  }
+  
+  .user-details-object p span {
+    display: block;
+    text-align: left;
+    padding: 2px;
+    margin-left: 10px;
+    
+  }
