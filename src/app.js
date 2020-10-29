@@ -78,3 +78,47 @@ function input(data) {
   </p>
   </div>`;
 }
+
+const firstName = document.getElementById("first-name"),
+  lastName = document.getElementById("last-name"),
+  greetingMessage = document.getElementById("greeting"),
+addUserForm = document.querySelector(".add-user");
+addUserForm.addEventListener("submit", addToDataBase);
+
+async function addToDataBase(event) {
+  event.preventDefault();
+  try {
+    const detail = [firstName, lastName, greetingMessage];
+     // console.log(detail);
+    const greeting = createGreetingObject(detail);
+    console.log(greeting);
+    const response =  await fetch('http://localhost:8080/greeting/add', {
+      method: 'POST',
+      // Accept: 'application/json, */*',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(greeting),
+    });
+     alert(`Successfully added new user!`);
+    clearFields();
+    closeAddFormButton.click();
+    listAllUsersButton.click();
+  } catch (error) {
+     alert(error.message);
+  }
+}
+
+// Creating greetings Object
+function createGreetingObject(inputArr) {
+    return {
+      firstName: inputArr[0].value,
+      lastName: inputArr[1].value,
+      greeting: inputArr[2].value,
+    };
+  }
+  
+
+function clearFields() {
+  (firstName.value = ''), (lastName.value = ''), (greetingMessage.value = '');
+}
